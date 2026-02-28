@@ -73,22 +73,6 @@ Orchestrated via CLI (`src/app.py`) with subcommands: `prepare`, `train`, `score
 
 ---
 
-## 📐 Value Math
-
-The core betting signal is built in two steps:
-
-**1. Expected Value**
-$$EV = (\hat{p} \times \text{decimal\_odds}) - 1$$
-
-Where $\hat{p}$ is the model's predicted win probability. Bets are filtered with `EV > 0` and sorted descending.
-
-**2. Market Deviation**
-$$\text{deviation} = \frac{\text{odds} - \text{market\_avg\_odds}}{\text{market\_avg\_odds}}$$
-
-This flags books that are pricing a side differently from the market consensus.
-
----
-
 ## 🗂️ Repo Structure
 
 ```
